@@ -1,0 +1,8 @@
+.list-data {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.data {
+  width: 20%;
+}

@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Tajawal|Staatliches');
+
+* {
+    color: 	#363534;
+}
+
+h1 {
+    font-family: 'Staatliches', sans-serif;
+    font-size: 100px;
+}
+
+h2 {
+    font-family: 'Staatliches', sans-serif;
+    font-size: 50px;
+}
+
+h3 {
+    font-family: 'Tajawal', sans-serif;
+    font-size: 20px;
+}
+
+p {
+    font-family: 'Tajawal', sans-serif;
+}
+
+.list-data {
+    /* width: 93%; */
+    display: flex;
+    flex-wrap: wrap; 
+}
+
+.data {
+    font-size: 36px;
+    margin: 10px;
+    font-family: 'Tajawal', sans-serif;
+}
+
+.data div {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.modal-body, .modal-footer, .modal-title{
+    text-align: "center";
+    font-size: 20px;
+}
+
+.full-screen {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    background-color: #ffffff;
+    overflow-x: hidden;
+}
+
+body.modal-open > :not(.modal) {
+    -webkit-filter: blur(1px);
+    -moz-filter: blur(1px);
+    -o-filter: blur(1px);
+    -ms-filter: blur(1px);
+    filter: blur(1px);
+}

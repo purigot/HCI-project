@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Tajawal|Staatliches');
+
+* {
+    color: 	#363534;
+}
+
+h1 {
+    font-family: 'Staatliches', sans-serif;
+    font-size: 82px;
+}
+
+h2 {
+  font-family: 'Staatliches', sans-serif;
+  font-size: 54px;
+}
+
+p {
+  font-family: 'Tajawal', sans-serif;
+}
+
+.circle {
+  border-radius: 50%;
+  height: 45px;
+  width: 45px;
+  text-align: center;
+}
+
+.circle-text {
+  color: #fff;
+  float: left;
+  line-height: 1;
+  margin-top: -0.5em;
+  padding-top: 50%;
+  text-align: center;
+  width: 100%;
+  font-size: 24px;
+  font-family: 'Staatliches', sans-serif;
+}
+
+.list-data {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  
+}
+.data {
+  width: 20%;
+  font-family: 'Tajawal', sans-serif;
+}
+
+.full-screen {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  background-color: #ffffff;
+  overflow-x: hidden;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding: 30px 100px 0px 80px;
+}
+
+/* The container */
+.container {
+  text-align: left;
+  display: block;
+  position: relative;
+  padding-left: 97px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: 24px;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  margin-left: 59px;
+  position: absolute;
+  top: 7;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: rgb(207, 200, 200);
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: rgb(167, 153, 136);
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgb(228, 225, 225);
+}
+body{
+  background-color: rgb(238, 237, 235);
+
+}

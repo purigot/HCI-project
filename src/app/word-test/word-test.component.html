@@ -1,0 +1,62 @@
+<div class="text-left full-screen">
+
+  <!-- Timer -->
+  <h1 class="time text-center mb-0">{{timeLeft}} Seconds Left</h1>
+  <p class="text-center mb-4">Select the word in the previous page</p>
+
+  <!-- Check words -->
+  <div class="list-data">
+    <div class="data" *ngFor="let word of resultWords">
+      <label class="container">{{word}}
+        <input type="checkbox" (change)="onCheckbox(word, $event.target.checked)">
+        <span class=" checkmark"></span>
+      </label>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<ng-template #modal let-modal data-keyboard="false" data-backdrop="static">
+  <div class="modal-header p-2">
+    <p class="modal-title">Notification</p>
+    <button type="button" class="close" aria-label="Close" (click)="close(); modal.close('Close click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body p-4">
+    <div class="text-center mb-3">
+      <img src="https://image.flaticon.com/icons/svg/1228/1228217.svg" width="150" />
+    </div>
+
+    <h2 class="text-center m-0">Your Score {{userCorrect.length}}/30</h2>
+    <div class="row justify-content-center">
+      <div class="circle m-1" style="background-color: #A0DDE0;">
+        <p class="circle-text">{{blueScore}}</p>
+      </div>
+      <div class="circle m-1" style="background-color: #DFDD6C;">
+        <p class="circle-text">{{greenScore}}</p>
+      </div>
+      <div class="circle m-1" style="background-color: #FF97A5;">
+        <p class="circle-text">{{pinkScore}}</p>
+      </div>
+      <div class="circle m-1" style="background-color: #FEB78D;">
+        <p class="circle-text">{{orangeScore}}</p>
+      </div>
+      <div class="circle m-1" style="background-color: #FCD353;">
+        <p class="circle-text">{{yellowScore}}</p>
+      </div>
+    </div>
+
+    <!-- <p class="text-center">
+      <mark style="background-color: #A0DDE0;" class="m-1">BLUE : {{blueScore}}</mark>
+      <mark style="background-color: #DFDD6C;" class="m-1">GREEN : {{greenScore}}</mark>
+      <mark style="background-color: #FF97A5;" class="m-1">PINK : {{pinkScore}}</mark>
+      <mark style="background-color: #FEB78D;" class="m-1">ORANGE : {{orangeScore}}</mark>
+      <mark style="background-color: #FCD353;" class="m-1">YELLOW : {{yellowScore}}</mark>
+    </p> -->
+    <!-- <p class="text-center">GREEN : {{greenScore}}</p>
+    <p class="text-center">PINK : {{pinkScore}}</p>
+    <p class="text-center">ORANGE : {{orangeScore}}</p>
+    <p class="text-center">YELLOW : {{yellowScore}}</p> -->
+  </div>
+</ng-template>
